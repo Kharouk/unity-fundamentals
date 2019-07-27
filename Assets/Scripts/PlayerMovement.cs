@@ -29,20 +29,20 @@ public class PlayerMovement : MonoBehaviour
         */
         RB.AddForce(0, 0, stabilizeSpeed(forwardForce));
 
-        xAxisInput = Input.GetAxis("Horizontal") * xAxisForce;
-        RB.AddForce(stabilizeSpeed(xAxisInput), 0, 0);
+//         xAxisInput = Input.GetAxis("Horizontal") * xAxisForce;
+//         RB.AddForce(stabilizeSpeed(xAxisInput), 0, 0);
 
         // OR:
-//         if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
-//         {
-//             Debug.Log("You've hit right.");
-//             RB.AddForce(stabilizeSpeed(xAxisForce), 0, 0);
-//         }
-//         if (Input.GetKey("a") || Input.GetKey(KeyCode.LeftArrow))
-//         {
-//             Debug.Log("You've hit left.");
-//             RB.AddForce(stabilizeSpeed(-xAxisForce), 0, 0);
-//         }
+        if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
+        {
+            Debug.Log("You've hit right.");
+            RB.AddForce(stabilizeSpeed(xAxisForce), 0, 0);
+        }
+        if (Input.GetKey("a") || Input.GetKey(KeyCode.LeftArrow))
+        {
+            Debug.Log("You've hit left.");
+            RB.AddForce(stabilizeSpeed(-xAxisForce), 0, 0);
+        }
     }
 
     float stabilizeSpeed(float num)
