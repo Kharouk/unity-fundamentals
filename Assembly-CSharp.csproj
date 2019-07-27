@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Z:/Game-Development/Unity Fundamentals/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
